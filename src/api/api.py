@@ -3,10 +3,10 @@
 
 from fastapi import APIRouter
 
-from api.nausf_ausf.v1.endpoints import ue_authentications
+from api.npcf_ue_policy_control.v1.endpoints import policies
 
 api_router = APIRouter()
 api_router.include_router(
-    ue_authentications.router,
-    prefix="/nausf-ausf/v1/ue-authentications",
+    policies.router,
+    prefix="/npcf-ue-policy-control/v1/policies",
 )
